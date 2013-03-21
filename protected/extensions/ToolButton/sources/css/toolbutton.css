@@ -1,0 +1,102 @@
+.maintoolbox{
+	background:#eee;
+	position:relative;
+	margin:0 !important;
+	border-radius: 3px 3px 3px 3px;
+}
+
+
+.toolbutton {
+	display: inline-block;
+	-moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+	background: #eee;
+	border-color: #CCCCCC #BBBBBB #A0A0A0;
+	padding: 3px 8px;
+	border:1px solid #aaa;
+	position:relative;
+	border-color: #CCCCCC #BBBBBB #A0A0A0;
+    border-left: 1px solid #BBBBBB;
+    border-radius: 3px 3px 3px 3px;
+    border-right: 1px solid #BBBBBB;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.ismiddlebotton{
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+    border-right: 1px solid #BBBBBB;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: -5px !important;
+}
+
+.isnextbotton{
+	border-bottom-right-radius: 0;
+    border-right: 1px solid #BBBBBB;
+    border-top-right-radius: 0;
+    margin-right: 0 !important;
+}
+
+.islastbotton{
+	border-bottom-left-radius: 0;
+    border-right: 1px solid #BBBBBB;
+    border-top-left-radius: 0;
+    margin-left: -5px !important;
+}
+
+.hoverbutton{
+	/*border-color:  #BBBBBB #A0A0A0 #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	*/
+}
+
+.subchilds{
+	 background: url("../images/smallicon.png") no-repeat scroll -36px 50% transparent;
+	 display:inline-block;
+    font-size: 0;
+    height: 6px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 7px;
+}
+
+.loading{
+	 background: url("../images/loading.gif") no-repeat transparent;
+	 display:inline-block;
+    font-size: 0;
+    height: 16px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 35px;
+}
+
+.saveicon {
+	background: url("../images/icon/floppy-icon.png") no-repeat transparent;
+	display:inline-block;
+	height: 16px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 16px;
+}
+.xlsicon {
+	background: url("../images/icon/xls.gif") no-repeat transparent;
+	display:inline-block;
+	height: 16px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 16px;
+}
+
+.pdficon {
+	background: url("../images/icon/pdf.gif") no-repeat transparent;
+	display:inline-block;
+	height: 16px;
+    margin-left: 3px;
+    vertical-align: middle;
+    width: 16px;
+}
