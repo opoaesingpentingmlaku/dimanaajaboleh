@@ -8,14 +8,15 @@
 class UserIdentity extends CUserIdentity
 {
 	private $_id;
-
+	
 	/**
 	 * Authenticates a user.
 	 * @return boolean whether authentication succeeds.
 	 */
 	public function authenticate()
 	{
-		$user=User::model()->find('LOWER(username)=?',array(strtolower($this->username)));
+		Yii::import('application.modules.members.models.Users');
+		$user=Users::model()->find('LOWER(username)=?',array(strtolower($this->username)));
 		if($user===null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
 		else if(!$user->validatePassword($this->password))

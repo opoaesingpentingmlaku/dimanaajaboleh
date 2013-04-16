@@ -12,8 +12,8 @@ class MembersModule extends CWebModule
 
 		// import the module-level models and components
 		$this->setImport(array(
-			'advisor.models.*',
-			'advisor.components.*',
+			'places.models.*',
+			'places.components.*',
 		));
 	}
 

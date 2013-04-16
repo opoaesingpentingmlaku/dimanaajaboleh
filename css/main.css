@@ -19,7 +19,7 @@ body
 {
 	margin: 0;
 	padding: 0;
-	/*border-top: 3px solid #C9E0ED;*/
+	border-top: 3px solid #C9E0ED;
 }
 
 #content
@@ -29,7 +29,7 @@ body
 
 #sidebar
 {
-	padding: 20px;
+	padding: 20px 20px 20px 0;
 }
 
 #footer
@@ -146,6 +146,13 @@ div.breadcrumbs span
 	font-weight: bold;
 }
 
+div.search-form
+{
+	padding: 10px;
+	margin: 10px 0;
+	background: #eee;
+}
+
 .portlet
 {
 
@@ -170,9 +177,8 @@ div.breadcrumbs span
 .portlet-content
 {
 	font-size:0.9em;
-	margin: 0;
+	margin: 0 0 15px 0;
 	padding: 5px 8px;
-	margin-bottom:15px;
 	background:#EFFDFF;
 }
 
@@ -190,78 +196,34 @@ div.breadcrumbs span
 	padding: 2px 0 4px 0px;
 }
 
-.post
+.operations
 {
-	margin: 0 0 20px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 }
 
-.post .title
+.operations li
 {
-	font-size: 1.5em;
-	border-bottom: 1px solid #C9E0ED;
+	padding-bottom: 2px;
 }
 
-.post .title a
+.operations li a
 {
-	color: #555;
+	font: bold 12px Arial;
+	color: #0066A4;
+	display: block;
+	padding: 2px 0 2px 8px;
+	line-height: 15px;
 	text-decoration: none;
 }
 
-.post .author
+.operations li a:visited
 {
-	color: #888;
-	margin: 0 0 5px;
+	color: #0066A4;
 }
 
-.post .nav
+.operations li a:hover
 {
-	-moz-border-radius:7px;
-	padding: 5px;
-	background: #EFFDFF;
-}
-
-.comment
-{
-	-moz-border-radius:7px;
-	padding: 10px;
-	background: #F5F5F5;
-	margin: 5px 0;
-}
-
-.comment .content
-{
-	margin: 10px 0;
-}
-
-.comment .author
-{
-	margin: 5px 0;
-	padding: 0 0 3px;
-	border-bottom: 1px solid #DDD;
-}
-
-.comment .time
-{
-	color: #888;
-	font-size: 0.8em;
-}
-
-.comment a.cid
-{
-	color:#CCC;
-	float:right;
-	font-size:1.5em;
-	font-weight:bold;
-	padding:0 5px 5px 5px;
-	text-decoration: none;
-}
-
-.comment a.cid:hover
-{
-	color:#555;
-}
-
-.comment .pending
-{
-	color:red;
+	background: #80CFFF;
 }

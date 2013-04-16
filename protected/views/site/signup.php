@@ -1,22 +1,14 @@
-
 <div id="box-signup">
-      	<div class="box-login-header">Sign up for Bangladvisor</div>
+      	<div class="box-login-header">Sign Up</div>
 		<?php $form=$this->beginWidget('CActiveForm', array(
 			'id'=>'login-form',
 			'enableAjaxValidation'=>true,
 		)); ?>
           	<div class="row">
 				<?php
-				echo $form->labelEx($model,'first_name');
-				echo $form->textField($model,'first_name');
-				echo $form->error($model,'first_name');
-				?>
-			</div>
-			<div class="row">
-				<?php
-				echo $form->labelEx($model,'last_name');
-				echo $form->textField($model,'last_name');
-				echo $form->error($model,'last_name');
+				echo $form->labelEx($model,'fullname');
+				echo $form->textField($model,'fullname');
+				echo $form->error($model,'fullname');
 				?>
 			</div>
 			<div class="row">			
@@ -48,6 +40,27 @@
 				?>
 			</div>
 			
+			<div class="row">
+				<?php
+				echo $form->labelEx($model,'birthdate');
+				echo $form->textField($model,'birthdate');
+				echo $form->error($model,'birthdate');
+				?>
+          	</div>
+			<div class="row">
+				<?php
+				echo $form->labelEx($model,'company');
+				echo $form->textField($model,'company');
+				echo $form->error($model,'company');
+				?>
+          	</div>
+			<div class="row">
+				<?php
+				echo $form->labelEx($model,'location');
+				echo $form->textField($model,'location');
+				echo $form->error($model,'location');
+				?>
+          	</div>
 			
 			<input type="submit" value=" Sign Up" class="btnlogin" />
 		
@@ -55,4 +68,3 @@
       </div>
 
 </div>
-
