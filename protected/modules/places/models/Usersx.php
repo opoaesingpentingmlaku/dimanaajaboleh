@@ -51,7 +51,7 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'journal' => array(self::HAS_MANY, 'journal', 'user_id'),
+			'files' => array(self::HAS_ONE, 'files', 'id'),
 		);
 	}
 

@@ -727,3 +727,7 @@ span.bangla, span.advisor { font-weight: bold; }
 .avatar:hover  .btnchange{
 	display: block;
 }
+
+#usercover:hover  .btnchange{
+	display: block;
+}

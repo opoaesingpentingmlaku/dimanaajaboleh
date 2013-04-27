@@ -34,11 +34,11 @@ class Files extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('filename, path, type, created_at, size', 'required'),
+			array('filename, path, type, created_at, size, container', 'required'),
 			array('status', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, filename, type, size', 'safe', 'on'=>'search'),
+			array('id, filename, type, size, container', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -54,6 +54,7 @@ class Files extends CActiveRecord
 			'path' => 'Path',
 			'size' => 'Size',
 			'journal_id' => 'Journal Id',
+			'container' => 'Container',
 			'caption' => 'Caption',
 			'description' => 'Description'
 		);

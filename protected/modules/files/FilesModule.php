@@ -14,6 +14,8 @@ class FilesModule extends CWebModule
 		$this->setImport(array(
 			'places.models.*',
 			'places.components.*',
+			'members.models.*',
+			'members.components.*',
 		));
 	}
 

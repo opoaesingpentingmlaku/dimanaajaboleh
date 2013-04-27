@@ -7,7 +7,8 @@ class DefaultController extends Controller
 	
 	public function actionIndex()
 	{
-		$user = Users::model()->find("username='".Yii::app()->request->getQuery('user')."'");
+		$user = Users::model()->findByAttributes(array("username" => Yii::app()->request->getQuery('user')));
+		$cover = Files::model()->findByPk($user->cover);
 		$followed = false;
 		if(!Yii::app()->user->isGuest){
 			$get_follow = User_fans::model()->findByAttributes(array('user_id' => $user->id, 'fans_id' => Yii::app()->user->id));
@@ -15,7 +16,7 @@ class DefaultController extends Controller
 				$followed = true;
 			}
 		}
-		$this->render('profile',array('user'=>$user, 'followed' => $followed));
+		$this->render('profile',array('user'=>$user, 'followed' => $followed, 'cover' => $cover));
 	}
 	
 	public function actionReviews()
@@ -61,14 +62,6 @@ class DefaultController extends Controller
 		
 		$reviews = Factory::model()->findAll($criteria);
 		$this->render('userfactories',array('reviews'=>$reviews,'pages'=>$pages,'total_reviews'=>$count,'user'=>Yii::app()->request->getQuery('user')));
-		//echo 'write review';
-	}
-	
-	public function actionMakereview($id)
-	{	
-		print_r($_GET);
-		echo 'asdasd';
-		//$this->render('formwritereview');
 		//echo 'write review';
 	}
 	

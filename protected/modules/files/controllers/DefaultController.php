@@ -7,15 +7,9 @@ class DefaultController extends Controller
 	
 	public function actionIndex()
 	{
-		$user = Users::model()->find("username='".Yii::app()->request->getQuery('user')."'");
-		$followed = false;
-		if(!Yii::app()->user->isGuest){
-			$get_follow = User_fans::model()->findByAttributes(array('user_id' => $user->id, 'fans_id' => Yii::app()->user->id));
-			if($get_follow){
-				$followed = true;
-			}
-		}
-		$this->render('profile',array('user'=>$user, 'followed' => $followed));
+		$file = Files::model()->findByPk($_GET['id']);
+		$url_file = Yii::app()->baseUrl.'/'.$file->path.$file->filename;
+		echo $url_file;
 	}
 	
 	public function actionReviews()

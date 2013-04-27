@@ -15,14 +15,15 @@ return array(
 
 	// autoloading model and component classes
 	'import'=>array(
-		'application.models.*',
 		'application.components.*',
+		'application.models.LoginForm',
 		'application.modules.files.models.*',
+		'application.modules.members.models.*',
 	),
 	
 	'defaultController'=>'places',
 
-	'modules'=>array('places', 'members',
+	'modules'=>array('places', 'members', 'files',
 			'gii'=>array(
 				'class'=>'system.gii.GiiModule',
 				'password'=>'test',
@@ -39,6 +40,7 @@ return array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
 		),
+
 		// uncomment the following to enable URLs in path-format
 		
 		'urlManager'=>array(
@@ -94,5 +96,8 @@ return array(
 	'params'=>array(
 		// this is used in contact page
 		'adminEmail'=>'khoirun.najib@gmail.com',
+		'fb_app_name' => 'jelajah',
+		'fb_app_id' => '117247575140950',
+		'fb_secret_key' => 'f02880a1db16cada04ff0f333ffb6e21',
 	),
 );

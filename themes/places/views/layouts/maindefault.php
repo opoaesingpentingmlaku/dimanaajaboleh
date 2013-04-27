@@ -18,7 +18,28 @@ $cs->registerCoreScript('jquery.ui');
 $cs->registerCoreScript('jquery.yii');
 $cs->registerCoreScript('jquery.nyroModal');
 ?>
-
+<script type="text/javascript" src="<?php echo Yii::app()->baseUrl; ?>/tiny_mce/tiny_mce.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/vendor/jquery.ui.widget.js"></script>
+<!-- The Templates plugin is included to render the upload/download listings -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/tmpl.min.js"></script>
+<!-- The Load Image plugin is included for the preview images and image resizing functionality -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/load-image.min.js"></script>
+<!-- The Canvas to Blob plugin is included for image resizing functionality -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/canvas-to-blob.min.js"></script>
+<!-- Bootstrap JS and Bootstrap Image Gallery are not required, but included for the demo -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap.min.js"></script>
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/bootstrap-image-gallery.min.js"></script>
+<!-- The Iframe Transport is required for browsers without support for XHR file uploads -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.iframe-transport.js"></script>
+<!-- The basic File Upload plugin -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.fileupload.js"></script>
+<!-- The File Upload file processing plugin -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.fileupload-fp.js"></script>
+<!-- The File Upload user interface plugin -->
+<script src="<?php echo Yii::app()->baseUrl; ?>/js/jquery.fileupload-ui.js"></script>
+<!-- The main application script -->
+<!--script src="<?php //echo Yii::app()->baseUrl; ?>/js/main.js"></script-->
 <script type="text/javascript" src="/kotakjelajah/js/jquery.nyroModal.js"></script>
 <script language="javascript">
 	$(document).ready(function(){

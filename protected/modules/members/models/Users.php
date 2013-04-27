@@ -37,9 +37,9 @@ class Users extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('username, password, email, fullname, salt, birthdate', 'required'),
+			array('username, password, email, fullname, salt, birthdate, avatar', 'required'),
 			array('username, password, email, salt', 'length', 'max'=>128),
-			array('company,location,created_at,followings, followers', 'safe'),
+			array('company,location,created_at,followings, followers, avatar', 'safe'),
 		);
 	}
 
@@ -51,7 +51,7 @@ class Users extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'journal' => array(self::HAS_MANY, 'journal', 'user_id'),
+			
 		);
 	}
 
@@ -66,6 +66,8 @@ class Users extends CActiveRecord
 			'password' => 'Password',
 			'salt' => 'Salt',
 			'fullname' => 'Fullname',
+			'avatar' => 'Avatar',
+			'cover' => 'Cover',
 			'created_at' => 'Created_at',
 			'updated_at' => 'Updated_at',
 			'birthdate' => 'Birthdate',

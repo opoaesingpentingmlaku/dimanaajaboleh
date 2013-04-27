@@ -1,6 +1,19 @@
 <div style="display: block; height:345px" class="detil">
-	<div style="float:left;">
-		<img src="../../images/blur.jpg" />
+	<div id="usercover" style="float:left;">
+		<?php
+			if($cover){
+				$src = Yii::app()->baseUrl.'/files/'.$cover->filename;
+			}else
+				$src = "../../images/blur.jpg";
+		?>
+		<img src="<?=$src?>" width="642" height="346" />
+		<?php
+			if(!Yii::app()->user->isGuest && Yii::app()->user->name == $user->username){
+		?>
+		<span align="center" class="btnchange" style="left:82%;width:110px">
+			<a id="changecov" href="user/changeavatar?con=cov">Change Cover</a>
+		</span>
+		<?php } ?>
 	</div>
 	<div id="userinfo">
 		<?php
@@ -8,11 +21,11 @@
 			$pathimg .= ($user->avatar) ? $user->avatar : 'avatar_default_male.jpg';
 		?>
 		<div align="center" class="avatar">
-			<img src='<?=$pathimg?>' width="100" />
+			<img src='http://localhost/kotakjelajah/index.php/files?id=<?=$user->avatar?>' width="100" />
 			<?php
 				if(!Yii::app()->user->isGuest && Yii::app()->user->name == $user->username){
 			?>
-			<div class="btnchange" style="width: 100px"><a id="changeava" href="user/changeavatar" >Change</a></div>
+			<div class="btnchange" style="width: 100px"><a id="changeava" href="user/changeavatar?con=ava" >Change</a></div>
 			<?php } ?>
 		</div>
 		<div style="clear:both"></div>
@@ -72,6 +85,7 @@
 <script language="javascript">
 	$(document).ready(function(){
 		$('#changeava').nyroModal();
+		$('#changecov').nyroModal();
 	});
 
 	function follow(fans_id, user_id){
